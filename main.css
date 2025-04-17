@@ -1,0 +1,84 @@
+ /* Reset and Base Styles */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #e9ecef 0%, #f4f6f8 100%);
+    display: flex;
+    align-items: center; /* Vertical centering */
+    justify-content: center; /* Horizontal centering */
+    min-height: 100vh;
+    line-height: 1.5;
+    color: #1a202c;
+  }
+  /* Container for the entire page */
+  .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+  }
+
+  /* Header styling */
+  header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+  }
+
+  /* Chat Form Container */
+  #chat_form {
+    width: 98%; /* Maintained wide width */
+    margin: auto; /* Ensures horizontal centering */
+    max-width: 1440px; /* Max width for larger screens */
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex; /* Added to ensure internal content can be centered if needed */
+    flex-direction: column; /* Align internal content vertically */
+    align-items: center; /* Center internal content horizontally */
+  }
+
+  #chat_form:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.06);
+  }
+
+  /* Subtle Border Accent */
+  #chat_form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #3b82f6, #10b981);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    #chat_form {
+      width: 90%; /* Slightly reduced for smaller screens */
+      margin: auto;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    #chat_form:hover {
+      transform: none;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+  }
+
+  /* Smooth Transitions for Dynamic Content */
+  #chat_form * {
+    transition: all 0.2s ease-in-out;
+  }
