@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SOP - DEMO</title>
-  <link rel="shortcut icon" href="./images.png" type="image/x-icon">
+  <!-- Ensure the favicon exists in the correct path -->
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+  <!-- Ensure main.css exists in the correct path -->
   <link rel="stylesheet" href="./main.css">
 </head>
 <body>
@@ -15,9 +17,12 @@
             </div>
         </header>
         <div id="chat_form">
+            <!-- Use a valid script URL and ensure the bot ID is correct -->
             <script 
-                src="https://app.easyparle.com/js/chat_form_plugin.js" data-bot-id="49638">
-            </script>
+                src="https://app.easyparle.com/js/chat_form_plugin.js" 
+                data-bot-id="49638"
+                onerror="console.log('Failed to load chat plugin')"
+            ></script>
         </div> 
     </div>
 </body>
